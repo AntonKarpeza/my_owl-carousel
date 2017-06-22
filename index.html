@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- head -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Basic usage demo">
+    <meta name="author" content="David Deutsch">
+    <title>
+        Basic Demo | Owl Carousel | 2.2.1
+    </title>
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <!--owl.theme use for work with it-->
+    <link rel="stylesheet" href="css/owl.theme.default.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="js/jquery-2.1.3.min.js"></script>
+    <script src="js/owl.carousel.js"></script>
+
+    <style>
+        #first{
+            height: 500px;
+            background-color: cornflowerblue;
+        }
+        #second{
+            margin-top: 200px;
+            height: 500px;
+            background-color: aquamarine;
+        }
+        .item{
+            height: 200px;
+            background-color: bisque;
+            margin: 0 30px;
+        }
+        .url_hash{
+            margin-top: 100px;
+            list-style-type: none;
+        }
+        .url_hash li{
+            display: inline-block;
+            margin: 5px;
+        }
+        .url_hash a{
+            text-decoration: none;
+            color: black;
+            background-color: beige;
+            border: solid black 1px;
+            padding: 5px;
+        }
+    </style>
+
+</head>
+<body>
+
+<!--  FIRST -->
+<section id="first">
+    <div class="owl-carousel owl-theme" id="owl-first">
+        <div class="item">
+            <h4>1</h4>
+        </div>
+        <div class="item">
+            <h4>2</h4>
+        </div>
+        <div class="item" data-hash="owf-third">
+            <h4>3</h4>
+        </div>
+        <div class="item">
+            <h4>4</h4>
+        </div>
+        <div class="item">
+            <h4>5</h4>
+        </div>
+        <div class="item">
+            <h4>6</h4>
+        </div>
+        <div class="item">
+            <h4>7</h4>
+        </div>
+        <div class="item">
+            <h4>8</h4>
+        </div>
+        <div class="item" data-hash="owf-nine">
+            <h4>9</h4>
+        </div>
+        <div class="item">
+            <h4>10</h4>
+        </div>
+        <div class="item">
+            <h4>11</h4>
+        </div>
+        <div class="item" data-hash="owf-twelve">
+            <h4>12</h4>
+        </div>
+    </div>
+    <div>
+        <ul class="url_hash">
+            <li><a href="#owf-third">third</a></li>
+            <li><a href="#owf-nine">nine</a></li>
+            <li><a href="#owf-twelve">twelve</a></li>
+        </ul>
+    </div>
+    <script>
+        $(document).ready(function() {
+            var owl = $('#owl-first');
+            owl.owlCarousel({
+                nav: true,
+                startPosition: 'URLHash',
+                URLhashListener: true,
+                navText: ["<img class='owf-prev' src='img/prev.png'>", "<img class='owf-next' src='img/next.png'>"],
+                rewindNav : true,
+                loop: true,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    600: {
+                        items: 2
+                    },
+                    1000: {
+                        items: 3
+                    }
+                }
+            })
+        })
+    </script>
+</section>
+
+<!--  SECOND  -->
+<section id="second">
+    <div class="owl-carousel owl-theme owl-second" id="owl-second">
+        <div class="item">
+            <h4>1</h4>
+        </div>
+        <div class="item">
+            <h4>2</h4>
+        </div>
+        <div class="item" data-hash="ows-third">
+            <h4>3</h4>
+        </div>
+        <div class="item">
+            <h4>4</h4>
+        </div>
+        <div class="item">
+            <h4>5</h4>
+        </div>
+        <div class="item">
+            <h4>6</h4>
+        </div>
+        <div class="item">
+            <h4>7</h4>
+        </div>
+        <div class="item">
+            <h4>8</h4>
+        </div>
+        <div class="item" data-hash="ows-nine">
+            <h4>9</h4>
+        </div>
+        <div class="item">
+            <h4>10</h4>
+        </div>
+        <div class="item">
+            <h4>11</h4>
+        </div>
+        <div class="item" data-hash="ows-twelve">
+            <h4>12</h4>
+        </div>
+    </div>
+    <div>
+        <ul class="url_hash">
+            <li><a href="#ows-third">third</a></li>
+            <li><a href="#ows-nine">nine</a></li>
+            <li><a href="#ows-twelve">twelve</a></li>
+        </ul>
+    </div>
+    <script>
+        $(document).ready(function() {
+            var owl = $('#owl-second');
+            owl.owlCarousel({
+                margin: 10,
+                nav: true,
+                startPosition: 'URLHash',
+                URLhashListener: true,
+                navText: ["<i class='fa fa-chevron-left ows-prev'></i>", "<i class='fa fa-chevron-right ows-next'></i>"],
+                loop: true,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    600: {
+                        items: 2
+                    },
+                    1000: {
+                        items: 3
+                    }
+                }
+            })
+        })
+    </script>
+</section>
+</body>
+</html>
